@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Headshot placeholder">
+  <defs><linearGradient id="a3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#ffb347"/></linearGradient></defs>
+  <rect width="160" height="160" fill="url(#a3)"/>
+  <circle cx="80" cy="66" r="24" fill="#ffffff" fill-opacity="0.3"/>
+  <path d="M 30 160 Q 80 100 130 160 Z" fill="#ffffff" fill-opacity="0.3"/>
+  <text x="80" y="88" font-family="Instrument Serif, Georgia, serif" font-size="38" fill="#ffffff" text-anchor="middle" font-weight="400">PM</text>
+</svg>
