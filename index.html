@@ -1,11 +1,11 @@
-
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#101610">
-    <title>Donde El Río No Canta | Inicio</title>
+
+    <title>Donde El Río No Canta</title>
 
     <style>
         * {
@@ -15,125 +15,54 @@
         }
 
         body {
-            min-height: 100vh;
+            background: #171717;
+            color: #E5E5E5;
             font-family: Georgia, "Times New Roman", serif;
-            background:
-                radial-gradient(
-                    ellipse at 50% 40%,
-                    rgba(91, 105, 65, 0.25),
-                    transparent 65%
-                ),
-                linear-gradient(145deg, #20251b, #10130f 65%, #080a08);
-            color: #e9e5d7;
+            min-height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             overflow: hidden;
+
+            opacity: 0;
+            animation: aparecer 0.5s ease forwards;
         }
 
-        /* Textura decorativa */
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            opacity: 0.16;
-            background-image:
-                repeating-linear-gradient(
-                    0deg,
-                    transparent,
-                    transparent 3px,
-                    rgba(255,255,255,0.025) 4px
-                );
-        }
-
-        .intro {
-            width: min(900px, 90%);
+        .pantalla {
             text-align: center;
-            padding: 55px 20px;
-            animation: aparecer 1.5s ease both;
-        }
-
-        .leaf {
-            font-size: 38px;
-            margin-bottom: 24px;
-            display: inline-block;
-            animation: flotar 4s ease-in-out infinite;
-            filter: grayscale(0.3);
-        }
-
-        .eyebrow {
-            color: #a7b187;
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 5px;
-            line-height: 2;
-            margin-bottom: 22px;
+            padding: 25px;
+            animation: revelar 0.8s ease forwards;
         }
 
         h1 {
-            font-size: clamp(35px, 7vw, 68px);
-            line-height: 1.08;
+            font-size: clamp(2rem, 6vw, 4.5rem);
             font-weight: normal;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-            text-shadow: 0 5px 35px #000;
+            letter-spacing: 3px;
+            line-height: 1.3;
+            color: #D6D0CC;
+            text-shadow: 0 0 25px rgba(190, 45, 45, 0.15);
         }
 
-        .line {
-            width: 75px;
-            height: 1px;
-            background: #8d9a6b;
-            margin: 0 auto 25px;
+        .separador {
+            width: 80px;
+            height: 2px;
+            background: #A83232;
+            margin: 25px auto 0;
+            animation: expandir 0.8s ease forwards;
         }
 
-        .quote {
-            color: #c7c7b9;
-            font-size: clamp(16px, 2.5vw, 20px);
-            font-style: italic;
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
-
-        .description {
-            color: #969b8b;
-            font-family: Arial, sans-serif;
-            font-size: 13px;
-            line-height: 1.8;
-            margin-bottom: 38px;
-        }
-
-        .start {
-            display: inline-block;
-            padding: 16px 32px;
-            background: #68764c;
-            border: 1px solid #87956a;
-            color: #fff;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            letter-spacing: 2px;
-            transition: 0.3s ease;
-        }
-
-        .start:hover {
-            background: #849363;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(115, 135, 78, 0.2);
-        }
-
-        .footer {
-            margin-top: 45px;
-            color: #697060;
-            font-family: Arial, sans-serif;
-            font-size: 10px;
-            letter-spacing: 2px;
+        body.salir {
+            animation: desaparecer 0.5s ease forwards;
         }
 
         @keyframes aparecer {
+            to { opacity: 1; }
+        }
+
+        @keyframes revelar {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(12px);
             }
             to {
                 opacity: 1;
@@ -141,46 +70,34 @@
             }
         }
 
-        @keyframes flotar {
-            0%, 100% { transform: translateY(0) rotate(-5deg); }
-            50% { transform: translateY(-8px) rotate(5deg); }
+        @keyframes expandir {
+            from { width: 0; }
+            to { width: 80px; }
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation: none !important;
-                transition: none !important;
-            }
+        @keyframes desaparecer {
+            to { opacity: 0; }
         }
     </style>
 </head>
 
 <body>
-    <main class="intro">
-        <div class="leaf" aria-hidden="true">🍃</div>
-
-        <p class="eyebrow">UNA HISTORIA DE MEMORIA Y ESPERANZA</p>
-
-        <h1>DONDE EL RÍO<br>NO CANTA</h1>
-
-        <div class="line"></div>
-
-        <p class="quote">
-            «Le quitaron su hogar, pero no su camino».
-        </p>
-
-        <p class="description">
-            En medio del silencio, cada paso es una oportunidad<br>
-            para encontrar el camino de regreso a la libertad.
-        </p>
-
-        <a class="start" href="Main.html">
-            COMENZAR EXPERIENCIA &nbsp; →
-        </a>
-
-        <p class="footer">
-            UNA HISTORIA INSPIRADA EN LA REALIDAD COLOMBIANA
-        </p>
+    <main class="pantalla">
+        <h1>Donde El Río<br>No Canta</h1>
+        <div class="separador"></div>
     </main>
+
+    <script>
+        // Tiempo de espera antes de entrar al juego
+        setTimeout(() => {
+            document.body.classList.add("salir");
+
+            setTimeout(() => {
+                window.location.href = "Html/Main.html";
+            }, 500);
+
+        }, 1000);
+    </script>
 </body>
 </html>
+```
