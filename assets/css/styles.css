@@ -571,9 +571,7 @@ a:hover { color: var(--accent); }
     display: none !important;
 }
 
-.orb {
-    display: none !important;
-}
+
 
 .site-header {
     backdrop-filter: none !important;
