@@ -567,7 +567,7 @@ a:hover { color: var(--accent); }
 
 /* PRUEBA: detectar artefactos gráficos */
 
-.grain {
+.orb {
     display: none !important;
 }
 
