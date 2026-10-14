@@ -564,3 +564,18 @@ a:hover { color: var(--accent); }
 .px-3-coffee {
   padding-left: 1rem !important;
 }
+
+/* PRUEBA: detectar artefactos gráficos */
+
+.grain {
+    display: none !important;
+}
+
+.orb {
+    display: none !important;
+}
+
+.site-header {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
